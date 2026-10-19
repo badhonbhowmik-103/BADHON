@@ -1,0 +1,3 @@
+// Feedback via mailto; add a preferred contact email in the mailto link when ready.
+document.getElementById('feedbackForm').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('visitorName').value.trim(),email=document.getElementById('visitorEmail').value.trim(),message=document.getElementById('visitorMessage').value.trim();const subject=encodeURIComponent('Website feedback from '+name);const body=encodeURIComponent('Name: '+name+'\nEmail: '+(email||'Not provided')+'\n\nMessage:\n'+message);alert('Your email app will open. Add your email address as the website owner in the mailto link if needed.');window.location.href='mailto:?subject='+subject+'&body='+body});
+document.getElementById('year').textContent=new Date().getFullYear();
